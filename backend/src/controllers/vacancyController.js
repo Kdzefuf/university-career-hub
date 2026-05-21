@@ -1,4 +1,4 @@
-const { Vacancy, EmployerProfile, Application, Skill, VacancySkill, SavedVacancy } = require('../models');
+const { Vacancy, EmployerProfile, Application, Skill, VacancySkill, SavedVacancy, User } = require('../models');
 const { AppError } = require('../middleware/errorHandler');
 const { Op } = require('sequelize');
 
@@ -138,8 +138,8 @@ const createVacancy = async (req, res, next) => {
             skills,
         } = req.body;
 
-        const employerProfile = await EmployerProfile.findOne({
-            where: { userId: req.user.id },
+        const employerProfile = await User.findOne({
+            where: { role: req.user.role },
         });
 
         if (!employerProfile) {

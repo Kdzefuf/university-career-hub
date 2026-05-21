@@ -6,6 +6,7 @@ import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
 import VacancyList from './pages/VacancyList';
 import VacancyDetail from './pages/VacancyDetail';
+import CreateVacancyForm from './pages/CreateVacancy';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
@@ -22,6 +23,7 @@ function App() {
               <Route path="/register" element={<RegisterForm />} />
               <Route path="/vacancies" element={<VacancyList />} />
               <Route path="/vacancies/:id" element={<VacancyDetail />} />
+              <Route path="/vacancies/create" element={<CreateVacancyForm />} />
             </Routes>
           </main>
         </div>
