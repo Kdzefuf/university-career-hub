@@ -7,6 +7,7 @@ import RegisterForm from './components/RegisterForm';
 import VacancyList from './pages/VacancyList';
 import VacancyDetail from './pages/VacancyDetail';
 import CreateVacancyForm from './pages/CreateVacancy';
+import EmployerProfileForm from './pages/EmployerProfileForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
@@ -24,6 +25,7 @@ function App() {
               <Route path="/vacancies" element={<VacancyList />} />
               <Route path="/vacancies/:id" element={<VacancyDetail />} />
               <Route path="/vacancies/create" element={<CreateVacancyForm />} />
+              <Route path="/employer/profile" element={<EmployerProfileForm />} />
             </Routes>
           </main>
         </div>

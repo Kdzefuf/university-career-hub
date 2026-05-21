@@ -11,6 +11,7 @@ dotenv.config();
 
 const authRoutes = require('./routes/authRoutes');
 const vacancyRoutes = require('./routes/vacancyRoutes');
+const employerProfileRoutes = require('./routes/employerProfileRoutes');
 
 require('./models');
 
@@ -74,6 +75,7 @@ app.get('/health', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/vacancies', vacancyRoutes);
+app.use('/api/employer', employerProfileRoutes);
 
 app.get('/', (req, res) => {
     res.json({

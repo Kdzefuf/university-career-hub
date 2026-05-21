@@ -54,4 +54,9 @@ export const vacancyAPI = {
     getSaved: () => api.get('/vacancies/saved'),
 };
 
+export const employerProfileAPI = {
+    get: () => api.get('/employer/profile'),
+    createOrUpdate: (data) => api.post('/employer/profile', data),
+};
+
 export default api;

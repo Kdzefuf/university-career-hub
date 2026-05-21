@@ -31,6 +31,12 @@ const Navbar = () => {
                                 </Link>
                             )}
 
+                            {user?.role === 'employer' && (
+                                <Link to="/employer/profile" className="nav-link">
+                                    Профиль компании
+                                </Link>
+                            )}
+
                             {user?.role === 'student' && (
                                 <Link to="/saved-vacancies" className="nav-link">
                                     Сохраненные
@@ -39,7 +45,7 @@ const Navbar = () => {
 
                             <div className="user-menu">
                                 <span className="user-name">
-                                    👤 {user?.firstName} {user?.lastName}
+                                    {user?.firstName} {user?.lastName}
                                 </span>
                                 <button onClick={handleLogout} className="btn-logout">
                                     Выйти
