@@ -173,7 +173,7 @@ const VacancyList = () => {
                                     )}
                                 </div>
 
-                                <p className="location">📍 {vacancy.location}</p>
+                                <p className="location">{vacancy.location}</p>
 
                                 <p className="description">
                                     {vacancy.description.substring(0, 150)}...

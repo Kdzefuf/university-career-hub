@@ -131,7 +131,7 @@ const VacancyDetail = () => {
                             disabled={saving}
                             className="btn-save"
                         >
-                            {saving ? 'Сохранение...' : '💾 Сохранить вакансию'}
+                            {saving ? 'Сохранение...' : 'Сохранить вакансию'}
                         </button>
                         {saveMessage && (
                             <span className={`save-message ${saveMessage.includes('Ошибка') ? 'error' : 'success'}`}>
@@ -143,7 +143,7 @@ const VacancyDetail = () => {
 
                 {!isAuthenticated && (
                     <div className="login-prompt">
-                        <p>🔒 Войдите как студент, чтобы сохранить эту вакансию</p>
+                        <p>Войдите как студент, чтобы сохранить эту вакансию</p>
                         <Link to="/login" className="btn-login">Войти</Link>
                     </div>
                 )}
@@ -192,7 +192,7 @@ const VacancyDetail = () => {
                 )}
 
                 <div className="vacancy-footer">
-                    <span className="views">👁️ Просмотров: {vacancy.viewsCount || 0}</span>
+                    <span className="views">Просмотров: {vacancy.viewsCount || 0}</span>
                     <span className="posted-date">
                         Опубликовано: {new Date(vacancy.createdAt).toLocaleDateString('ru-RU')}
                     </span>
